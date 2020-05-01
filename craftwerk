@@ -1,0 +1,40 @@
+local component = require("component")
+local sides = require("sides")
+-- Main output side
+local f = sides.forward
+-- Main input sides
+local u = sides.up
+local d = sides.down 
+-- What to craft
+recipe = {}
+recipe["double_cobblestone"]={
+    [1]='minecraft:cobblestone',
+    [2]='minecraft:cobblestone',
+    [3]='minecraft:cobblestone',
+    [5]='minecraft:cobblestone',
+    [6]='minecraft:cobblestone',
+    [7]='minecraft:cobblestone',
+    [9]='minecraft:cobblestone',
+    [10]='minecraft:cobblestone',
+    [11]='minecraft:cobblestone',   
+}
+function moveStuff()
+    local input_size = component.inventory_controller.getInventorySize(d)
+    print(input_size)
+    for i=1, input_size do
+        itemName = component.inventory_controller.getStackInSlot(d,i)
+        if itemName.name then
+            print(itemName.name)
+            print(itemName.name)
+        end
+    end
+end
+
+while true do
+    moveStuff()
+    return
+end
+
+
+
+
