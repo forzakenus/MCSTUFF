@@ -22,9 +22,10 @@ function moveStuff()
     local input_size = component.inventory_controller.getInventorySize(d)
     print(input_size)
     for i=1, input_size do
-        itemName = component.inventory_controller.getStackInSlot(d,i)
-        if itemName.name then
-            print(itemName.name)
+        item = component.inventory_controller.getStackInSlot(d,i)
+        if item.name then
+            itemName = tiem.name
+            print(itemName)
         end
     end
 end
