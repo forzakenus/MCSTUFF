@@ -25,7 +25,6 @@ function moveStuff()
         itemName = component.inventory_controller.getStackInSlot(d,i)
         if itemName.name then
             print(itemName.name)
-            print(itemName.name)
         end
     end
 end
